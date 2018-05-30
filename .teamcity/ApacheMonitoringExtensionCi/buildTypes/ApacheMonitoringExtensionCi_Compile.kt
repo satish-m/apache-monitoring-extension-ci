@@ -4,10 +4,10 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
-object ApacheMonitoringExtensionCi_Build : BuildType({
+object ApacheMonitoringExtensionCi_Compile : BuildType({
     uuid = "0bfdf68e-6ef0-4254-b5d9-9fc4217fd772"
-    id = "ApacheMonitoringExtensionCi_Build"
-    name = "Build"
+    id = "ApacheMonitoringExtensionCi_Compile"
+    name = "Compile"
 
     vcs {
         root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
@@ -17,14 +17,6 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
     steps {
         maven {
             goals = "clean"
-            mavenVersion = defaultProvidedVersion()
-            jdkHome = "%env.JDK_17%"
-        }
-    }
-
-    steps {
-        maven {
-            goals = "test"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_17%"
         }

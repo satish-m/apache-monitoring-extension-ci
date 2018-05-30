@@ -1,9 +1,7 @@
 package ApacheMonitoringExtensionCi
 
 import ApacheMonitoringExtensionCi.buildTypes.*
-import ApacheMonitoringExtensionCi.vcsRoots.*
 import ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs
-import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.VersionedSettings
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.versionedSettings
@@ -16,7 +14,8 @@ object Project : Project({
 
     vcsRoot(ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
 
-    buildType(ApacheMonitoringExtensionCi_Build)
+    buildType(ApacheMonitoringExtensionCi_Compile)
+    buildType(ApacheMonitoringExtensionCi_Test)
 
     features {
         versionedSettings {
