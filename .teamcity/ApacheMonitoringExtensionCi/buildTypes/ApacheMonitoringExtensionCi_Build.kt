@@ -16,7 +16,13 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
 
     steps {
         maven {
-            goals = "clean test"
+            goals = "clean"
+            mavenVersion = defaultProvidedVersion()
+            jdkHome = "%env.JDK_17%"
+        }
+
+        maven {
+            goals = "test"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_17%"
         }
