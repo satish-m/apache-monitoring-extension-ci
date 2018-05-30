@@ -24,7 +24,9 @@ object ApacheMonitoringExtensionCi_Test : BuildType({
 
     dependencies {
         dependency(ApacheMonitoringExtensionCi_Compile) {
+            snapshot {
 
+            }
         }
     }
 
