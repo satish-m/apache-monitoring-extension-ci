@@ -10,6 +10,6 @@ public class DummyTest {
 
     @Test
     public void dummyTest1() {
-        Assert.assertEquals(4, 4);
+        Assert.assertEquals(4, 5);
     }
 }
