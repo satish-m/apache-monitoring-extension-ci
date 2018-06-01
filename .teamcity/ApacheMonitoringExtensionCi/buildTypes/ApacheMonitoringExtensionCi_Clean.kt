@@ -6,7 +6,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object ApacheMonitoringExtensionCi_Clean : BuildType({
     uuid = "C5D5FE07-806F-4169-B865-7071EBD62838"
-    id = "ApacheMonitoringExtensionCi_Compile_Test_Java7"
+    id = "ApacheMonitoringExtensionCi_Clean"
     name = "Clean"
 
     vcs {
