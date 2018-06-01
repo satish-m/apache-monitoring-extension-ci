@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object ApacheMonitoringExtensionCi_Clean : BuildType({
-    uuid = "0bfdf68e-6ef0-4254-b5d9-9fc4217fd772"
+    uuid = "C5D5FE07-806F-4169-B865-7071EBD62838"
     id = "ApacheMonitoringExtensionCi_Compile_Test_Java7"
     name = "Clean"
 
