@@ -14,8 +14,8 @@ object Project : Project({
 
     vcsRoot(ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
 
-    buildType(ApacheMonitoringExtensionCi_Compile)
-    buildType(ApacheMonitoringExtensionCi_Test)
+    buildType(ApacheMonitoringExtensionCi_Compile_Test_Java7)
+    buildType(ApacheMonitoringExtensionCi_Compile_Test_Java8)
 
     features {
         versionedSettings {
