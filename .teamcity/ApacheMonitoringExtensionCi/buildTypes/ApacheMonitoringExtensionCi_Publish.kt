@@ -7,7 +7,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
  */
 object ApacheMonitoringExtensionCi_Publish : BuildType({
 
-    uuid = "D7EDEC38-45FC-43FD-ACDA-B41BA7534AC4"
+    uuid = "6C35D3E8-F0D4-44D1-9090-431FF9241F74"
     id = "ApacheMonitoringExtensionCi_Publish"
     name = "Publish"
 
