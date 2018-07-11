@@ -18,7 +18,6 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
 
     }
 
-
     steps {
         maven {
             goals = "install"
@@ -37,11 +36,6 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
             snapshot {
 
             }
-        }
-    }
-
-    triggers {
-        vcs {
         }
     }
 

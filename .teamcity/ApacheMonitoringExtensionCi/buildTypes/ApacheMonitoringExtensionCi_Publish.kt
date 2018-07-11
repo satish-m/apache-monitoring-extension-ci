@@ -29,9 +29,4 @@ object ApacheMonitoringExtensionCi_Publish : BuildType({
             }
         }
     }
-
-    triggers {
-        vcs {
-        }
-    }
 })
