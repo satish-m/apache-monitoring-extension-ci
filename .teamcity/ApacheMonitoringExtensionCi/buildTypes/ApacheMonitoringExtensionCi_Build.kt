@@ -14,7 +14,7 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
     name = "Build"
 
     artifactRules = """
-                      *.jar
+                      *.zip
                     """.trimIndent()
 
     vcs {

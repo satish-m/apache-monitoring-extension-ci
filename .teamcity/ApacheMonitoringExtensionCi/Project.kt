@@ -18,7 +18,6 @@ object Project : Project({
     buildType(ApacheMonitoringExtensionCi_Compile_Test_Java7)
     buildType(ApacheMonitoringExtensionCi_Compile_Test_Java8)
     buildType(ApacheMonitoringExtensionCi_Build)
-    buildType(ApacheMonitoringExtensionCi_Publish)
 
 
     features {
