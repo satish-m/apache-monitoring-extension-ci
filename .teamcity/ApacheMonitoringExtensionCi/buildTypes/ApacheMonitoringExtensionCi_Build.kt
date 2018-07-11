@@ -12,6 +12,11 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
     id = "ApacheMonitoringExtensionCi_Build"
     name = "Build"
 
+    vcs {
+        root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
+
+    }
+
 
     steps {
         maven {

@@ -11,6 +11,10 @@ object ApacheMonitoringExtensionCi_Publish : BuildType({
     id = "ApacheMonitoringExtensionCi_Publish"
     name = "Publish"
 
+    vcs {
+        root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
+
+    }
 
     dependencies {
         dependency(ApacheMonitoringExtensionCi_Build) {
