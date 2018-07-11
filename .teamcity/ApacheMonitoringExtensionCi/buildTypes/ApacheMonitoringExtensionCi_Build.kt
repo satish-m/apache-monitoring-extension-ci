@@ -2,7 +2,6 @@ package ApacheMonitoringExtensionCi.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
-import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 
 /**
@@ -13,10 +12,9 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
     id = "ApacheMonitoringExtensionCi_Build"
     name = "Build"
 
-    vcs {
-        root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
-
-    }
+    artifactRules = """
+                      *.jar
+                    """.trimIndent()
 
     steps {
         maven {
@@ -24,6 +22,7 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
         }
+
     }
 
     dependencies {
