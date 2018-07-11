@@ -10,7 +10,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 object ApacheMonitoringExtensionCi_Publish : BuildType({
     uuid = "6AFCB61F-3848-4A30-B764-15931B841E43"
     id = "ApacheMonitoringExtensionCi_Publish"
-    name = "Clean"
+    name = "Publish"
 
 
 
