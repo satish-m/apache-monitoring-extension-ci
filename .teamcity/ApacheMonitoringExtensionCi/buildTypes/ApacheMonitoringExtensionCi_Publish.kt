@@ -23,6 +23,9 @@ object ApacheMonitoringExtensionCi_Publish : BuildType({
                       *.jar
                     """.trimIndent()
             }
+            snapshot {
+
+            }
         }
     }
 })
