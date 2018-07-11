@@ -1,6 +1,7 @@
 package ApacheMonitoringExtensionCi.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
+import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 /**
  * @author Satish Muddam
@@ -26,6 +27,11 @@ object ApacheMonitoringExtensionCi_Publish : BuildType({
             snapshot {
 
             }
+        }
+    }
+
+    triggers {
+        vcs {
         }
     }
 })
