@@ -17,7 +17,7 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
 
     steps {
         maven {
-            goals = "test"
+            goals = "install"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
         }
