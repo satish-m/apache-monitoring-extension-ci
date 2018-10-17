@@ -41,6 +41,6 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
     }
 
     artifactRules = """
-       targer/ApacheMonitor-*.zip
+       target/ApacheMonitor-*.zip
     """.trimIndent()
 })
