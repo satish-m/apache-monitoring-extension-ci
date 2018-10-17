@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  machine:
+    image: appdynamics/machine:4.4
+    env_file:
+     - appdynamics.env
+    build:
+      context: .
+    volumes:          
+      - /:/hostroot:ro
+      - /var/run/docker.sock:/var/run/docker.sock
