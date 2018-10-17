@@ -1,4 +1,5 @@
-dockerRun: docker run -d \
+dockerRun:
+         docker run -d \
            -e APPDYNAMICS_CONTROLLER_HOST_NAME=192.168.1.8 \
            -e APPDYNAMICS_CONTROLLER_PORT=8090 \
            -e APPDYNAMICS_CONTROLLER_SSL_ENABLED=false \
@@ -7,4 +8,3 @@ dockerRun: docker run -d \
            -e MACHINE_AGENT_PROPERTIES="-Dappdynamics.sim.enabled=true -Dappdynamics.docker.enabled=true" \
            -v /:/hostroot:ro -v /var/run/docker.sock:/var/run/docker.sock \
            appdynamics/machine:4.4
-           @echo starting container ##################%%%%%%%%%%%%%%%%%%%&&&&&&&&&&&&&&&&&&&&&&
