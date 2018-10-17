@@ -1,6 +1,7 @@
 package ApacheMonitoringExtensionCi.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.exec
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
@@ -19,6 +20,10 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
             goals = "test"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
+        }
+        exec {
+            path = "make"
+            arguments = "dockerRun"
         }
     }
 
