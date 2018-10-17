@@ -7,3 +7,4 @@ dockerRun: docker run -d \
            -e MACHINE_AGENT_PROPERTIES="-Dappdynamics.sim.enabled=true -Dappdynamics.docker.enabled=true" \
            -v /:/hostroot:ro -v /var/run/docker.sock:/var/run/docker.sock \
            appdynamics/machine:4.4
+           @echo starting container ##################%%%%%%%%%%%%%%%%%%%&&&&&&&&&&&&&&&&&&&&&&
