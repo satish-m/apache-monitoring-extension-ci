@@ -1,6 +1,6 @@
 package ApacheMonitoringExtensionCi.buildTypes
 
-import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.exec
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
@@ -43,4 +43,10 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
     artifactRules = """
        target/ApacheMonitor-*.zip
     """.trimIndent()
+
+    params {
+        param("env.BUILD_FILE", """
+       target/ApacheMonitor-*.zip
+    """.trimIndent())
+    }
 })
