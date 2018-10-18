@@ -27,6 +27,19 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
         }
     }
 
+    params {
+        param("env.BUILD_FILE", """
+       target/ApacheMonitor-*.zip
+    """.trimIndent())
+    }
+
+    steps {
+        exec {
+            path = "make"
+            arguments = "dockerRun"
+        }
+    }
+
     dependencies {
         dependency(ApacheMonitoringExtensionCi_Clean) {
             snapshot {
@@ -44,9 +57,5 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
        target/ApacheMonitor-*.zip
     """.trimIndent()
 
-    params {
-        param("env.BUILD_FILE", """
-       target/ApacheMonitor-*.zip
-    """.trimIndent())
-    }
+
 })
