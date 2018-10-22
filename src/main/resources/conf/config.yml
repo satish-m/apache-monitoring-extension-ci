@@ -6,9 +6,9 @@ metricPrefix: Server|Component:<COMPONENT_ID>|Custom Metrics|Apache|
 
 # Apache particulars
 servers:
-   - displayName: "Local Apache"
-     host: "localhost"
-     port: 80
+   - displayName:
+     host:
+     port:
      username: ""
      password: ""
      encryptedPassword: ""

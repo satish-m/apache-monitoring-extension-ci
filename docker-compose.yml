@@ -11,3 +11,11 @@ services:
     volumes:
       - /:/hostroot:ro
       - /var/run/docker.sock:/var/run/docker.sock
+
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile_Apache
+    hostname: apache.fwdproxy
+    ports:
+        - "8585:80"
