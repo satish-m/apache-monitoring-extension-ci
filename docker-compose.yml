@@ -2,12 +2,12 @@ version: '3'
 
 services:
   machine:
-    image: appdynamics/machine:4.4
+#    image: appdynamics/machine:4.4
     env_file:
      - appdynamics.env
     build:
       context: .
-    volumes:          
+      dockerfile: Dockerfile
+    volumes:
       - /:/hostroot:ro
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${BUILD_FILE}:/opt/appdynamics/monitors/
