@@ -55,8 +55,8 @@ public class ApacheMonitor extends ABaseMonitor {
         for (Map apacheServer : apacheServers) {
 
             ApacheMonitorTask task = new ApacheMonitorTask(serviceProvider, this.getContextConfiguration(), apacheServer);
-            AssertUtils.assertNotNull(apacheServer.get("displayName"), "The displayName can not be null");
-            serviceProvider.submit((String) apacheServer.get("displayName"), task);
+            //AssertUtils.assertNotNull(apacheServer.get("displayName"), "The displayName can not be null");
+            serviceProvider.submit("ApacheMonitor", task);
         }
     }
 
