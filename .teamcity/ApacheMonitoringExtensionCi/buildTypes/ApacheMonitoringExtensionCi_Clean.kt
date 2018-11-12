@@ -8,6 +8,7 @@ object ApacheMonitoringExtensionCi_Clean : BuildType({
     uuid = "C5D5FE07-806F-4169-B865-7071EBD62838"
     id = "ApacheMonitoringExtensionCi_Clean"
     name = "Clean"
+    paused = true
 
     vcs {
         root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
