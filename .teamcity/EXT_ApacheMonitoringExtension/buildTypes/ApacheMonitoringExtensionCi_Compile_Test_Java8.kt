@@ -11,7 +11,7 @@ object ApacheMonitoringExtensionCi_Compile_Test_Java8 : BuildType({
     name = "Test Java8"
 
     vcs {
-        root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
+        root(EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_ApacheMonitoringExtension)
 
     }
 

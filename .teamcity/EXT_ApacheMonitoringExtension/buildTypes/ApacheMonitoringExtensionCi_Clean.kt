@@ -10,7 +10,7 @@ object ApacheMonitoringExtensionCi_Clean : BuildType({
     name = "Clean"
 
     vcs {
-        root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
+        root(EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_ApacheMonitoringExtension)
 
     }
 

@@ -19,7 +19,7 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
                     """.trimIndent()
 
     vcs {
-        root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
+        root(EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_ApacheMonitoringExtension)
     }
 
     steps {
