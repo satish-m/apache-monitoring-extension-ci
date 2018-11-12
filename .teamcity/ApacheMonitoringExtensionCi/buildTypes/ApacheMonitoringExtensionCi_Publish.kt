@@ -13,7 +13,5 @@ object ApacheMonitoringExtensionCi_Publish : BuildType({
 
     vcs {
         root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
-
     }
-
 })

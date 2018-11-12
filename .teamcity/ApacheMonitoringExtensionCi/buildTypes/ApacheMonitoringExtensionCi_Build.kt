@@ -20,7 +20,6 @@ object ApacheMonitoringExtensionCi_Build : BuildType({
 
     vcs {
         root(ApacheMonitoringExtensionCi.vcsRoots.ApacheMonitoringExtensionCi_HttpsGithubComSatishMApacheMonitoringExtensionCiRefs)
-
     }
 
     steps {
