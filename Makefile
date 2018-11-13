@@ -7,4 +7,4 @@ dockerRun: ## Run MA in docker
 	@echo started container ##################%%%%%%%%%%%%%%%%%%%&&&&&&&&&&&&&&&&&&&&&&
 
 dockerStop:
-     ${DOCKER_STOP}
+	${DOCKER_STOP}
