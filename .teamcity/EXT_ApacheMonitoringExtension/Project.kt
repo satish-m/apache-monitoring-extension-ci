@@ -1,5 +1,6 @@
 package EXT_ApacheMonitoringExtension
 
+import EXT_ApacheMonitoringExtension.buildTypes.*
 import EXT_ApacheMonitoringExtension.vcsRoots.*
 import EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_Apache
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
@@ -13,7 +14,10 @@ object Project : Project({
     parentId = "EXT"
     name = "ApacheMonitoringExtension"
 
+    vcsRoot(EXT_ApacheMonitoringExtension_HttpsGithubComSatishMApacheMonitoringExtensionCiRe)
     vcsRoot(EXT_ApacheMonitoringExtension_Apache)
+
+    buildType(EXT_ApacheMonitoringExtension_Build)
 
     features {
         versionedSettings {
