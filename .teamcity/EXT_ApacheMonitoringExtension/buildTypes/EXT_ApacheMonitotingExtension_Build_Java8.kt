@@ -20,13 +20,19 @@ object EXT_ApacheMonitotingExtension_Build_Java8 : BuildType({
 
     steps {
         maven {
-            goals = "clean install"
+            goals = "clean install -p no-integration-tests"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
         }
         exec {
             path = "make"
             arguments = "dockerRun"
+        }
+
+        maven {
+            goals = "verify"
+            mavenVersion = defaultProvidedVersion()
+            jdkHome = "%env.JDK_18%"
         }
     }
 

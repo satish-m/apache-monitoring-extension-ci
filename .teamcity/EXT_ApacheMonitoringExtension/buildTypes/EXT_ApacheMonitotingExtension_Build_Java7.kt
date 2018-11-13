@@ -20,7 +20,7 @@ object EXT_ApacheMonitotingExtension_Build_Java7 : BuildType ({
 
     steps {
         maven {
-            goals = "clean test"
+            goals = "clean test -p no-integration-tests"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_17%"
         }
