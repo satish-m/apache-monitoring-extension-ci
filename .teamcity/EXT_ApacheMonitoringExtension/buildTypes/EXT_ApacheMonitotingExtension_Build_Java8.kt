@@ -20,7 +20,7 @@ object EXT_ApacheMonitotingExtension_Build_Java8 : BuildType({
 
     steps {
         maven {
-            goals = "clean install -p no-integration-tests"
+            goals = "clean install -Pno-integration-tests"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
         }
