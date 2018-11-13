@@ -15,6 +15,11 @@ object Project : Project({
 
     vcsRoot(EXT_ApacheMonitoringExtension_ApacheMonitoringExtension)
 
+    buildType(EXT_ApacheMonitoringExtension_Clean)
+    buildType(EXT_ApacheMonitoringExtension_Compile_Test_Java7)
+    buildType(EXT_ApacheMonitoringExtension_Compile_Test_Java8)
+    buildType(EXT_ApacheMonitoringExtension_Build)
+
     features {
         versionedSettings {
             id = "PROJECT_EXT_6"
