@@ -1,6 +1,7 @@
 package EXT_ApacheMonitoringExtension.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 /**
@@ -14,6 +15,28 @@ object EXT_ApacheMonitoringExtension_Build : BuildType({
     vcs {
         root(EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_Apache)
 
+    }
+
+    steps {
+        maven {
+            goals = "install"
+            mavenVersion = defaultProvidedVersion()
+            jdkHome = "%env.JDK_18%"
+        }
+
+    }
+
+    dependencies {
+        dependency(EXT_ApacheMonitotingExtension_Build_Java7) {
+            snapshot {
+
+            }
+        }
+        dependency(EXT_ApacheMonitotingExtension_Build_Java8) {
+            snapshot {
+
+            }
+        }
     }
 
     triggers {
