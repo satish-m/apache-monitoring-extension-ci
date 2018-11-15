@@ -29,10 +29,17 @@ object EXT_ApacheMonitotingExtension_Build_Java8 : BuildType({
             arguments = "dockerRun"
         }
 
+        Thread.sleep(300000) // Wait for metrics to report
+        
         maven {
             goals = "verify"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
+        }
+
+        exec {
+            path = "make"
+            arguments = "dockerStop"
         }
     }
 
