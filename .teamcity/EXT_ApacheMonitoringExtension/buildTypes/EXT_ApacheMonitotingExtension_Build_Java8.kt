@@ -30,7 +30,7 @@ object EXT_ApacheMonitotingExtension_Build_Java8 : BuildType({
         }
 
         maven {
-            Thread.sleep(300000) // Wait for metrics to report
+            //Thread.sleep(300000) // Wait for metrics to report
 
             goals = "clean install"
             mavenVersion = defaultProvidedVersion()
