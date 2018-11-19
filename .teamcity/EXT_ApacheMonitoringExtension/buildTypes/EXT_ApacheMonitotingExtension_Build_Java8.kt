@@ -29,6 +29,11 @@ object EXT_ApacheMonitotingExtension_Build_Java8 : BuildType({
             arguments = "dockerRun"
         }
 
+        exec {
+            path = "make"
+            arguments = "sleep"
+        }
+
         maven {
             //Thread.sleep(300000) // Wait for metrics to report
 
