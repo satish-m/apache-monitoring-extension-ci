@@ -2,7 +2,6 @@ package EXT_ApacheMonitoringExtension
 
 import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitoringExtension_Build
 import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitoringExtension_Clean
-import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitotingExtension_Build_Java7
 import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitotingExtension_Build_Java8
 import EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_Apache
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
@@ -18,7 +17,6 @@ object Project : Project({
     vcsRoot(EXT_ApacheMonitoringExtension_Apache)
 
     buildType(EXT_ApacheMonitoringExtension_Clean)
-    buildType(EXT_ApacheMonitotingExtension_Build_Java7)
     buildType(EXT_ApacheMonitotingExtension_Build_Java8)
     buildType(EXT_ApacheMonitoringExtension_Build)
 

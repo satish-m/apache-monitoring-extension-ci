@@ -27,11 +27,6 @@ object EXT_ApacheMonitoringExtension_Build : BuildType({
     }
 
     dependencies {
-        dependency(EXT_ApacheMonitotingExtension_Build_Java7) {
-            snapshot {
-
-            }
-        }
         dependency(EXT_ApacheMonitotingExtension_Build_Java8) {
             snapshot {
 
