@@ -1,36 +1,26 @@
 package EXT_ApacheMonitoringExtension.buildTypes
 
-import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 /**
  * @author Satish Muddam
  */
-object EXT_ApacheMonitoringExtension_Build : BuildType({
-    uuid = "8ae04611-4cb4-4e71-97ac-95570f17f4b1"
-    id = "EXT_ApacheMonitoringExtension_Build"
-    name = "Build"
+object EXT_ApacheMonitoringExtension_CleanBuild : BuildType({
+    uuid = "1E9B08D2-E321-4FF3-A773-6510FB389F57"
+    id = "EXT_ApacheMonitoringExtension_CleanBuild"
+    name = "CleanBuild"
 
     vcs {
         root(EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_Apache)
-
     }
 
     steps {
         maven {
-            goals = "install"
+            goals = "clean install -Pno-integration-tests"
             mavenVersion = defaultProvidedVersion()
             jdkHome = "%env.JDK_18%"
-        }
-
-    }
-
-    dependencies {
-        dependency(EXT_ApacheMonitoringExtension_Build_Java8) {
-            snapshot {
-
-            }
         }
     }
 
@@ -38,4 +28,8 @@ object EXT_ApacheMonitoringExtension_Build : BuildType({
         vcs {
         }
     }
+
+    artifactRules = """
+       target/ApacheMonitor-*.zip
+    """.trimIndent()
 })

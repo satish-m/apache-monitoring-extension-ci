@@ -8,9 +8,9 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 /**
  * @author Satish Muddam
  */
-object EXT_ApacheMonitotingExtension_Build_Java8 : BuildType({
+object EXT_ApacheMonitoringExtension_Build_Java8 : BuildType({
     uuid = "DCCBBA22-695C-4FA6-8A35-CDE3FDB17D28"
-    id = "EXT_ApacheMonitotingExtension_Build_Java8"
+    id = "EXT_ApacheMonitoringExtension_Build_Java8"
     name = "Test in Java8"
 
     vcs {

@@ -1,8 +1,6 @@
 package EXT_ApacheMonitoringExtension
 
-import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitoringExtension_Build
-import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitoringExtension_Clean
-import EXT_ApacheMonitoringExtension.buildTypes.EXT_ApacheMonitotingExtension_Build_Java8
+import EXT_ApacheMonitoringExtension.buildTypes.*
 import EXT_ApacheMonitoringExtension.vcsRoots.EXT_ApacheMonitoringExtension_Apache
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.VersionedSettings
@@ -16,9 +14,13 @@ object Project : Project({
 
     vcsRoot(EXT_ApacheMonitoringExtension_Apache)
 
-    buildType(EXT_ApacheMonitoringExtension_Clean)
-    buildType(EXT_ApacheMonitotingExtension_Build_Java8)
-    buildType(EXT_ApacheMonitoringExtension_Build)
+
+    buildType(EXT_ApacheMonitoringExtension_VerifyPipeline)
+
+    buildType(EXT_ApacheMonitoringExtension_CleanBuild)
+    buildType(EXT_ApacheMonitoringExtension_SetupInLinux)
+    buildType(EXT_ApacheMonitoringExtension_IntegrationTestInLinux)
+    buildType(EXT_ApacheMonitoringExtension_StopLinux)
 
     features {
         versionedSettings {
