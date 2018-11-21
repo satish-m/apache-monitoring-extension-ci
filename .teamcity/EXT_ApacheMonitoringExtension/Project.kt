@@ -15,8 +15,6 @@ object Project : Project({
     vcsRoot(EXT_ApacheMonitoringExtension_Apache)
 
 
-    buildType(EXT_ApacheMonitoringExtension_VerifyPipeline)
-
     buildType(EXT_ApacheMonitoringExtension_CleanBuild)
     buildType(EXT_ApacheMonitoringExtension_SetupInLinux)
     buildType(EXT_ApacheMonitoringExtension_IntegrationTestInLinux)
@@ -35,7 +33,6 @@ object Project : Project({
     }
 
     buildTypesOrder = arrayListOf(
-            EXT_ApacheMonitoringExtension_VerifyPipeline,
             EXT_ApacheMonitoringExtension_CleanBuild,
             EXT_ApacheMonitoringExtension_SetupInLinux,
             EXT_ApacheMonitoringExtension_IntegrationTestInLinux,

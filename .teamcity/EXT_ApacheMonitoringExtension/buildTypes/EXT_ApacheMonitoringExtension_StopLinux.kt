@@ -32,8 +32,6 @@ object EXT_ApacheMonitoringExtension_StopLinux : BuildType({
         }
     }
 
-    publishCommitStatus()
-
     triggers {
         vcs {
         }
