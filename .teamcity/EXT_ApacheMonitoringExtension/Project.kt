@@ -33,4 +33,12 @@ object Project : Project({
             storeSecureParamsOutsideOfVcs = true
         }
     }
+
+    buildTypesOrder = arrayListOf(
+            EXT_ApacheMonitoringExtension_VerifyPipeline,
+            EXT_ApacheMonitoringExtension_CleanBuild,
+            EXT_ApacheMonitoringExtension_SetupInLinux,
+            EXT_ApacheMonitoringExtension_IntegrationTestInLinux,
+            EXT_ApacheMonitoringExtension_StopLinux
+    )
 })
