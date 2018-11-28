@@ -6,7 +6,7 @@ metricPrefix: Custom Metrics|Apache|
 
 # Apache particulars
 servers:
-   - displayName: "LocalApache"
+   - displayName: "Apache1"
      host: "${APACHE_HOST}"
      port: "${APACHE_PORT}"
      username:
