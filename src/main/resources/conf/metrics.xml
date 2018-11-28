@@ -99,5 +99,4 @@ Set delta = true for metric to report per-min data
         <metric attr="map_count" alias="JK Status|map_count" aggregationType = "OBSERVATION" timeRollUpType = "CURRENT" clusterRollUpType = "COLLECTIVE" />
         <metric attr="last_reset_ago" alias="JK Status|last_reset_ago" aggregationType = "OBSERVATION" timeRollUpType = "CURRENT" clusterRollUpType = "COLLECTIVE" />
     </stat>
-
 </stats>
