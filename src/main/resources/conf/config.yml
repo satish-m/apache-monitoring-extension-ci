@@ -6,11 +6,11 @@ metricPrefix: Server|Component:<COMPONENT_ID>|Custom Metrics|Apache|
 
 # Apache particulars
 servers:
-   - displayName:
-     host:
-     port:
-     username: ""
-     password: ""
+   - displayName: "LocalApache"
+     host: "${APACHE_HOST}"
+     port: "${APACHE_PORT}"
+     username:
+     password:
      encryptedPassword: ""
      useSsl: false
 
